@@ -1,0 +1,15 @@
+collegeGPA=read.csv(choose.files())
+plot(collegeGPA)
+View(collegeGPA)
+model1=lm(College.GPA~.,data=collegeGPA)
+summary(model1)
+model2=lm(College.GPA~. -Hrs..of.Sleep,data=collegeGPA)
+summary(model2)
+model3=lm(College.GPA~. -Club.Activities -Hrs..of.Sleep,data=collegeGPA)
+summary(model3)
+model4=lm(College.GPA~. -Club.Activities -Hrs..of.Sleep -Survey.Data,data=collegeGPA)
+summary(model4)
+model5=lm(College.GPA~. -Club.Activities -Hrs..of.Sleep -Survey.Data -High.School.GPA,data=collegeGPA)
+summary(model5)
+
+
